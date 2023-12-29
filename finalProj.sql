@@ -1,7 +1,7 @@
 -- Create a new database named UniversityDB
 CREATE DATABASE UniversityDB;
 
-GO
+
 
 -- Use the UniversityDB database
 USE UniversityDB;
@@ -139,19 +139,7 @@ INSERT INTO Enrollments (StudentID, CourseID, EnrollmentDate, GPA) VALUES
 
 
 
--- remove db to retreive the db from backup file
-DROP DATABASE UniversityDB;
 
--- retreive db from backup file
-RESTORE DATABASE UniversityDB
-FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\UniversityBackup.bak'
-WITH REPLACE,
-MOVE 'UniversityDB' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\UniversityDB.mdf',
-MOVE 'UniversityDB_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\UniversityDB_log.ldf';
-
-
-use UniversityDB
-GO
 
 -- Data Analysis
 
@@ -193,11 +181,3 @@ GROUP BY ROLLUP (D.DepartmentName, YEAR(E.EnrollmentDate))
 ORDER BY D.DepartmentName, AcademicYear;
 
 
--- This query creates a cube of enrollment by course, academic year, and department.
-SELECT C.CourseName, D.DepartmentName, YEAR(E.EnrollmentDate) AS AcademicYear, COUNT(E.EnrollmentID) AS EnrollmentCount
-FROM Courses C
-INNER JOIN Enrollments E ON C.CourseID = E.CourseID
-INNER JOIN Students S ON E.StudentID = S.StudentID
-INNER JOIN Departments D ON S.DepartmentID = D.DepartmentID
-GROUP BY CUBE (C.CourseName, D.DepartmentName, YEAR(E.EnrollmentDate))
-ORDER BY C.CourseName, D.DepartmentName, AcademicYear;
