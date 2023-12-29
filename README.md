@@ -201,7 +201,7 @@ INSERT INTO Enrollments (StudentID, CourseID, EnrollmentDate, GPA) VALUES
 
 1) Backup **UniversityDB** so as to restore it in case of database is missing or a server failure.
 
-2) To backup, right click to db in object explorer and select Back Up and as shown:
+2) To backup, right click to db in object explorer and select Back Up as shown:
     - <img src="backup.png" width="430" height="400">
 
 
