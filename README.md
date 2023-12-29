@@ -317,5 +317,6 @@ ORDER BY C.CourseName, D.DepartmentName, AcademicYear;
 <img src="cube_1.PNG" width="300" height="500">
 <img src="cube_2.PNG" width="300" height="500">
 <img src="cube_3.PNG" width="300" height="500">
+<hr/>
 
-
+## Task 4: Result Reports with Charts or Graphs
