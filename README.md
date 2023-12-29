@@ -29,6 +29,7 @@ LOG ON
     FILEGROWTH = 64MB
 )
 ```
+<hr/>
 
 3) Use the UniversityDB database: `USE UniversityDB;`
 
@@ -95,6 +96,8 @@ INSERT INTO Students (StudentID, FirstName, LastName, BirthDate, DepartmentID) V
 (223089 ,'Toqa', 'Hesham', '2001-12-21', 3),
 (203026 ,'Ahmed', 'Abedelwahab', '2000-02-06', 4);
 ``` 
+<hr/>
+
 - insert data into **Departments** table
 
 ```
@@ -105,6 +108,8 @@ INSERT INTO Departments (DepartmentID, DepartmentName) VALUES
 (4, 'History'),
 (5, 'Biology');
 ```
+<hr/>
+
 - insert data into **Courses** table
 
 ```
@@ -140,6 +145,7 @@ INSERT INTO Courses (CourseID, CourseName, Credits, DepartmentID) VALUES
 (111503, 'Microbiology', 3, 5),
 (111504, 'Human Anatomy', 3, 5);
 ```
+<hr/>
 
 - insert data into **Enrollments** table
 ```
@@ -165,6 +171,7 @@ INSERT INTO Enrollments (StudentID, CourseID, EnrollmentDate, GPA) VALUES
 (223089 , 111503, '2022-04-22', 3.2),
 (203026 , 111504, '2023-04-25', 3.5);
 ```
+<hr/>
 
 6) Display the content of tables in UniversityDB:
 
