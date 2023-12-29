@@ -320,3 +320,15 @@ ORDER BY C.CourseName, D.DepartmentName, AcademicYear;
 <hr/>
 
 ## Task 4: Result Reports with Charts or Graphs
+
+We create result report based on the analysis in Task 2 - we use ***Count of Students by Department***
+This query counts the number of students in each department.
+- After executing the query, we export the result to an Excel file.
+- In SQL Server Management Studio (SSMS), we do this by right-clicking on the result grid and selecting "Save Results As..." and choose CSV format.
+
+<img src="saveQuery.png" width="400px" height="150px"/>
+
+- After importing the CSV file to excel, we insert charts and graphs based on the analysis.
+
+<img src="report.PNG" width="400px" height="900px"/>
+
