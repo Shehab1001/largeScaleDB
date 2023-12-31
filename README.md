@@ -60,7 +60,7 @@ CREATE TABLE Courses (
 
 
 CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY IDENTITY(1,1),
+    EnrollmentID INT PRIMARY KEY,
     StudentID INT NOT NULL,
     CourseID INT NOT NULL,
     EnrollmentDate DATE NOT NULL,
