@@ -10,8 +10,7 @@ The examples and tasks are based on a hypothetical university database named "Un
 2) Create a database called **UniversityDB** and specify the file location, size, maxsize and file growth configuring two main files: **Primary Data File(.mdf)** and **Transaction Log File (.ldf)** which are necessary for storing the actual data in Database and for Database restoration and backup in case of missing this Database.
 
 ```
-CREATE DATABASE UniversityDB;
-
+CREATE DATABASE UniversityDB
 ON
 (
     NAME = UniversityDB,
